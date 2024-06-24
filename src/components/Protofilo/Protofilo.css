@@ -1,0 +1,117 @@
+.Protofilo .between-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 5px 0 30px;
+}
+.Protofilo .boxs {
+  width: 90%;
+  align-items: center;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  text-align: center;
+  gap: 5rem;
+}
+.Protofilo .boxs .box {
+  width: 100%;
+}
+.Protofilo h2 {
+  margin-bottom: 10px !important;
+}
+.Protofilo .between-btn button {
+  cursor: pointer;
+  margin: 0 50px;
+  font-size: 25px;
+  background-color: transparent;
+  color: var(--color-white);
+  position: relative;
+  transition: 0.5s ease-in-out;
+}
+.Protofilo .between-btn button:hover::before {
+  position: absolute;
+  content: "";
+  width: 80px;
+  height: 2px;
+  background-color: var(--color-primary);
+  bottom: -5px;
+  border-radius: 50%;
+  transition: all 0.5s ease-in-out;
+  border: 0;
+}
+.Protofilo .between-btn button.active,
+.Protofilo .between-btn button:hover.active {
+  color: var(--color-primary) !important;
+}
+.Protofilo .between-btn button.active::before {
+  position: absolute;
+  content: "";
+  width: 70px;
+  height: 2px;
+  background-color: var(--color-primary);
+  bottom: -5px;
+  border-radius: 50%;
+  transition: all 0.5s ease-in-out;
+  /* transform: translate(50%); */
+}
+.Protofilo .between-btn button:hover::before {
+  width: 120px;
+  height: 2px;
+  border-radius: 50%;
+  transition: all 0.5s ease-in-out;
+  /* transform: translate(20%); */
+}
+.protofilo_container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2.5rem;
+}
+.Protofilo_item {
+  background-color: var(--color-bg-variant);
+  padding: 1.1rem;
+  border-radius: 2rem;
+  border: 1px solid transparent;
+  transition: var(--transition);
+  text-align: center;
+}
+.Protofilo_item:hover {
+  background-color: transparent;
+  border-color: var(--color-primary-variant);
+}
+.Protofilo_item-image {
+  border-radius: 1.5rem;
+  overflow: hidden;
+}
+.Protofilo_item-image img {
+  height: 200px;
+}
+.Protofilo_item h3 {
+  margin: 1.2rem auto 5px;
+}
+@media (max-width: 1024px) {
+  .protofilo_container {
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+  }
+}
+@media (max-width: 690px) {
+  .protofilo_container {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  .Protofilo_item {
+    width: 100%;
+    margin: auto;
+  }
+  .Protofilo .between-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* margin: 5px 0 30px; */
+  }
+  .Protofilo .between-btn button {
+    padding: 0;
+    margin: 0 20px;
+    font-size: 18px;
+  }
+}
